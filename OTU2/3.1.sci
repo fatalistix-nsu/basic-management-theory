@@ -1,0 +1,7 @@
+u = linspace(0, 2*%pi, 100)
+v = linspace(0, 2*%pi, 100)
+[u_grid, v_grid] = ndgrid(u, v)
+x = cos(u_grid) .* u_grid .* (1 + cos(v_grid / 2))
+y = u_grid / 2 .* sin(v_grid)
+z = sin(u_grid) .* u_grid .* (1 + cos(v_grid / 2))
+plot3d2(x, y, z)
